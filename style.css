@@ -1,0 +1,159 @@
+@font-face {
+    font-family: gilroy-bold;
+    src: url(fonts/Gilroy-Bold.ttf);
+}
+.wrapper{
+    width: 320px;
+    height: 480px;
+    background: #20CCD3;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+.main{
+    width: 100%;
+    height: 185px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+.faceMove{
+    top: 143px !important;
+    transition: 1s;
+}
+.face{
+    position: absolute;
+    top: 163px;
+    left: 50%;
+    transform: translate(-50% );
+    pointer-events: none;
+}
+.mouth{
+    position: absolute; 
+    top: 286px;
+    left: 111px;
+}
+@keyframes mainAnim {
+    from{
+        transform: translateX(60px);
+    }
+    to{
+        transform: translateX(0) rotate(7);
+    }
+}
+.smile{
+    position: absolute; 
+    top: 266px;
+    left: 111px;
+}
+.smileMove{
+}
+.header{
+    padding-top: 30px;
+}
+.glass{
+    margin-top: 35px;
+    width: 245px;
+    height: 95px;
+    animation: animeGlass 2s infinite, mainAnim 2s;
+    padding: 10px;
+    display: block;
+}
+@keyframes animeGlass {
+    0%, 100%{
+      transform: rotate(7deg);  
+    }
+    50%{
+        transform: rotate(-7deg); 
+    }
+}
+.lastic{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.lasticShow{
+    opacity: 1;
+}
+.lasticOff{
+    opacity: 0;
+    transition-duration: 0.1s;
+}
+.pouseAnim{
+    animation-play-state: paused;
+}
+.footer{
+    padding-bottom: 50px;
+}
+.cursorN{
+    cursor: none;
+}
+.erase{
+    font-family: gilroy-bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #F5F5F5;
+}
+.moveText{
+    
+}
+.opacity0{
+    opacity: 0;
+    transition: 1s;
+}
+.opacity1{
+    opacity: 1;
+    transition: 1s;
+}
+.aftertext{
+    font-family: gilroy-bold;;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #F5F5F5;
+    position: absolute;
+    top:360px;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+}
+.aftertextAnim{
+    top:340px;
+    opacity: 1;
+    transition: 1.5s;
+}
+.afterbtn{
+    position: absolute;
+    top: 420px;
+    left: 61px;
+}
+.btn{
+    width: 200px;
+    height: 40px;
+    background: #BFE1DC;
+    border-radius: 10px;
+    border: none;
+    font-family: gilroy-bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #FFFFFF;
+    color: #BFE1DC;
+    transition: 0.5s;
+}
+.btn:not(:hover){
+    transition: 1s;
+}
